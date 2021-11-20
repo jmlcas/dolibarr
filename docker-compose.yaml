@@ -31,6 +31,7 @@ services:
       - DOLI_DB_USER=dolibarr
       - DOLI_DB_PASSWORD=dolibarr
       - TZ=Europe/Madrid 
+      - LANG=es_ES
     volumes:
       - ./doli_html:/var/www/html
       - ./doli_docs:/var/www/documents
