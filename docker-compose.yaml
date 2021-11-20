@@ -3,7 +3,7 @@ version: '3'
 services:
 
   mariadb:
-    image: mariadb:latest
+    image: mariadb:10.6
     container_name: mariadb
     restart: unless-stopped
     command: --character_set_client=utf8 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
@@ -16,7 +16,7 @@ services:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
 
   dolibarr:
-    image: upshift/dolibarr:latest
+    image: upshift/dolibarr:14.0
     container_name: dolibarr
     restart: unless-stopped
     depends_on:
@@ -34,5 +34,5 @@ services:
     volumes:
       - ./doli_html:/var/www/html
       - ./doli_docs:/var/www/documents
-      - ./doli_scripts:/var/www/scripts
+
      
