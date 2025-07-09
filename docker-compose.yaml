@@ -26,7 +26,7 @@ services:
       MYSQL_USER: "dolibarr"
       MYSQL_PASSWORD: "p4ssw0rd"
       MYSQL_ROOT_PASSWORD: "p4ssw0rd"
-    restart: unless-stopped  
+    restart: unless-stopped
     volumes:
       - ./mysql-data:/var/lib/mysql
     
