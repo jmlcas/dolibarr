@@ -14,12 +14,14 @@ services:
     ports:
       - "8200:80"
     restart: unless-stopped
+    links:
+      - mysql    
     volumes:
       - ./dolibarr-docs:/var/www/documents
       - ./dolibarr-custom:/var/www/html/custom
 
   mysql:
-    image: mysql:latest
+    image: mariadb:latest
     container_name: dolibarr-db
     environment:
       MYSQL_DATABASE: "dolibarr"
